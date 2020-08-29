@@ -3,27 +3,41 @@ package sample.ticket.booking.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/**
+ * UserAccount is the Entity class which has the data for the users
+ * 
+ * @author Shalini
+ *
+ */
 @Entity
-public class UserDetails {
+public class UserAccount {
 	
 	@Id
+	private int userId;
 	private String userName;
 	private int age;
 	private String source;
 	private String destination;
 	
-	public UserDetails() {
+	public UserAccount() {
 		
 	}
 	
-	public UserDetails(String userName, int age, String source, String destination) {
+	public UserAccount(int userId, String userName, int age, String source, String destination) {
 		super();
+		this.userId = userId;
 		this.userName = userName;
 		this.age = age;
 		this.source = source;
 		this.destination = destination;
 	}
 	
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	public String getUserName() {
 		return userName;
 	}

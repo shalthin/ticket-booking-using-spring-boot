@@ -2,8 +2,15 @@ package sample.ticket.booking.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import sample.ticket.booking.model.UserDetails;
+import sample.ticket.booking.model.UserAccount;
 
-public interface BookingTrainsRepo extends CrudRepository<UserDetails, String> {
+/**
+ * BookingTrainsRepo is the interface which extends CrudRepository which is used to get all the CRUD operations
+ * 
+ * @author Shalini
+ *
+ */
+
+public interface BookingTrainsRepo extends CrudRepository<UserAccount, Integer> {
 
 }
